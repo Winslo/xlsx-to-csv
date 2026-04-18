@@ -141,7 +141,7 @@ for idx, sheet_name in enumerate(sheet_names):
     else:
         filled_sheets.append(sheet_name)
         total_rows += len(df)
-        df.to_csv(output, index=False, encoding="utf-8-sig")
+        df.to_csv(output, index=False, header=False, encoding="utf-8-sig")
 
 # ── 결과 통계 ────────────────────────────────────────────────
 st.markdown("---")
