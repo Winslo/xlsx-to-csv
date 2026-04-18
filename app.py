@@ -125,7 +125,7 @@ filled_sheets = []
 
 for idx, sheet_name in enumerate(sheet_names):
     try:
-        df = pd.read_excel(xls, sheet_name=sheet_name, engine="openpyxl")
+        df = pd.read_excel(xls, sheet_name=sheet_name, engine="openpyxl", header=None)
     except Exception as e:
         st.warning(f"⚠️ '{sheet_name}' 시트를 읽는 중 오류 발생 → 건너뜁니다. ({e})")
         continue
